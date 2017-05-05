@@ -42,6 +42,13 @@
     {
       "accessType": "READ",
       "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW",
+      "property": "__get__user"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
       "principalId": "teamMember",
       "permission": "ALLOW",
       "property": "findById"
