@@ -2,5 +2,42 @@
   "db": {
     "name": "db",
     "connector": "memory"
+  },
+  "mysqlDs": {
+    "name": "mysqlDs",
+    "connector": "mysql",
+    "host": "localhost",
+    "port": 3306,
+    "database": "restdb",
+    "username": "root",
+    "password": "123456"
+  },
+  "mongoDs": {
+    "name": "mongoDs",
+    "connector": "mongodb",
+    "host": "localhost",
+    "port": 27017,
+    "database": "restdb",
+    "username": "",
+    "password": ""
+  },
+  "emailDs": {
+    "name": "emailDs",
+    "connector": "mail",
+    "transports": [
+      {
+        "type": "smtp",
+        "host": "smtp.exmail.qq.com",
+        "secure": true,
+        "port": 465,
+        "tls": {
+          "rejectUnauthorized": false
+        },
+        "auth": {
+          "user": "liujun@xjastc.com",
+          "pass": "pass_worD0912"
+        }
+      }
+    ]
   }
 }

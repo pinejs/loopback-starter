@@ -19,6 +19,7 @@ module.exports = function(Project) {
 
   // donate
   Project.donate = function(id, amount, cb) {
+    console.log(arguments);
     Project.findById(id, function(err, project) {
       if (err) return cb(err);
 
