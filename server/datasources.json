@@ -21,6 +21,12 @@
     "username": "",
     "password": ""
   },
+  "storage": {
+    "name": "storage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./server/storage"
+  },
   "emailDs": {
     "name": "emailDs",
     "connector": "mail",
@@ -39,5 +45,11 @@
         }
       }
     ]
+  },
+  "emayDs": {
+    "name": "emayDs",
+    "connector": "emay",
+    "cdkey": "your-emay-cdkey",
+    "password": "your-emay-password"
   }
 }

@@ -1,0 +1,23 @@
+{
+  "cos": {
+    "accessKeyId": "your-cos-access-key-id",
+    "accessKeySecret": "your-cos-access-key-secret",
+    "bucket": ""
+  },
+  "oss": {
+    "internal": false,
+    "region": "oss-cn-shanghai",
+    "accessKeyId": "your-alioss-access-key-id",
+    "accessKeySecret": "your-alioss-access-key-secret",
+    "bucket": ""
+  },
+  "rackspace": {
+    "username": "your-rackspace-username",
+    "apiKey": "your-rackspace-api-key",
+    "region": "DFW"
+  },
+  "amazon": {
+    "key": "your-amazon-key",
+    "keyId": "your-amazon-key-id"
+  }
+}
