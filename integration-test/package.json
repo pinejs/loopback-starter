@@ -1,0 +1,33 @@
+{
+  "name": "integration-service",
+  "version": "1.0.0",
+  "description": "Integration tests for the project-service.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pinejs/loopback-starter.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "mocha -t 50000 ./index.js",
+    "lint": "eslint ."
+  },
+  "author": "Frank Liu",
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "^2.4.5",
+    "should": "^8.3.0",
+    "supertest": "^1.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^2.7.0"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "rules": {
+      "semi": 2
+    }
+  }
+}

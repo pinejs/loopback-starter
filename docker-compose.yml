@@ -1,0 +1,15 @@
+version: '2'
+services:
+  project-service:
+    build: ./project-service
+    container_name: project_service
+    ports:
+     - "8123:8123"
+    links:
+      - db:db
+    depends_on:
+     - db
+    environment:
+     - DATABASE_HOST=db
+  db:
+    build: ./mysql-db
