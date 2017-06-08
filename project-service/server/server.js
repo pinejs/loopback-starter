@@ -43,3 +43,14 @@ boot(app, __dirname, function(err) {
   if (require.main === module)
     app.start();
 });
+
+process.on('uncaughtException', function (err){
+  console.error('worker uncaughtException: %s', err.message);
+  var worker = require('cluster').worker;
+  if(worker){
+    process.send({ cmd: 'suicide', stack: err.stack, message:err.message});
+    Server.close(function(){
+      process.exit(1);
+    });
+  }
+});
