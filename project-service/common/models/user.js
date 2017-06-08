@@ -42,6 +42,10 @@ module.exports = function(User) {
     var html = 'Click <a href="' + url + '?access_token=' +
         info.accessToken.id + '">here</a> to reset your password';
 
+    //发送短信
+    // User.app.models.Emay.send({});
+
+    //发送邮件
     User.app.models.Email.send({
       to: info.email,
       from: info.email,

@@ -33,7 +33,7 @@
   },
   "team": {
     "dataSource": "mysqlDs",
-    "public": false
+    "public": true
   },
   "project": {
     "dataSource": "mysqlDs",
@@ -42,5 +42,9 @@
   "container": {
     "dataSource": "storage",
     "public": true
+  },
+  "Email": {
+    "dataSource": "emailDs",
+    "public": false
   }
 }
