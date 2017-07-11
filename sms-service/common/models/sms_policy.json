@@ -1,0 +1,54 @@
+{
+  "name": "SmsPolicy",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "type": {
+      "type": "string"
+    },
+    "policy_alias": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "trigger_rule": {
+      "type": "string"
+    },
+    "valid_seconds": {
+      "type": "number"
+    },
+    "retry_times": {
+      "type": "number"
+    },
+    "interval_seconds": {
+      "type": "number"
+    },
+    "exclude_rule": {
+      "type": "string"
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "created_at": {
+      "type": "date",
+      "defaultFn": "now"
+    },
+    "updated_at": {
+      "type": "date",
+      "defaultFn": "now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user": {
+      "type": "hasMany",
+      "model": "SmsRequest",
+      "foreignKey": "policy_id"
+    }
+  },
+  "acls": [
+
+  ],
+  "methods": []
+}

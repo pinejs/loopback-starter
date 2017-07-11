@@ -1,0 +1,51 @@
+{
+  "name": "SmsRequest",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "msg_id": {
+      "type": "string"
+    },
+    "msg_group_id": {
+      "type": "string"
+    },
+    "platform_code": {
+      "type": "string"
+    },
+    "template_code": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "number"
+    },
+    "params": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "date",
+      "defaultFn": "now"
+    },
+    "updated_at": {
+      "type": "date",
+      "defaultFn": "now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "SmsPolicy",
+      "foreignKey": "policy_id"
+    }
+  },
+  "acls": [
+
+  ],
+  "methods": []
+}
