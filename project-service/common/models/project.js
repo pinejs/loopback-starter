@@ -4,6 +4,14 @@
 // License text available at https://opensource.org/licenses/Artistic-2.0
 
 module.exports = function(Project) {
+  Project.disableRemoteMethodByName('updateAll');  // Removes (POST) /account_users/update
+  Project.disableRemoteMethodByName('createChangeStream');
+  Project.disableRemoteMethodByName('exists');
+  Project.disableRemoteMethodByName('patchOrCreate');
+  Project.disableRemoteMethodByName('replaceOrCreate');
+  Project.disableRemoteMethodByName('upsertWithWhere');
+  Project.disableRemoteMethodByName('prototype.patchAttributes');
+
   // listProjects
   Project.listProjects = function(cb) {
     Project.find({
